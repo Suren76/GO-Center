@@ -1,0 +1,96 @@
+.c1 {
+  color: #673304;
+}
+
+.c2 {
+  color: #FF9400;
+}
+
+.c1b {
+  background: #673304;
+}
+
+.c11 {
+  color: rgba(163, 95, 34, 0.8);
+}
+
+.c11b {
+  background: rgba(163, 95, 34, 0.8);
+}
+
+#logo {
+  width: 30px;
+}
+
+#logo,
+#navbarContent a {
+  color: #673304;
+}
+
+header .nav-item:hover {
+  background: #FF9400;
+  border-radius: 5px;
+}
+
+.carousel-item {
+  height: auto;
+  max-height: 500px;
+  min-height: 300px;
+}
+
+.post {
+  background: #F8F9FA;
+  border-radius: 7px;
+}
+.post a,
+.post h3,
+.post p {
+  color: #673304;
+}
+.post a {
+  border-radius: 10px;
+}
+.post a:hover {
+  background: #FF9400;
+  border-radius: 10px;
+}
+
+.events-list {
+  background: #F8F9FA;
+  border-radius: 5px;
+}
+.events-list .event {
+  background: #FF9400;
+  color: #673304;
+  border-radius: 7px;
+}
+
+.footer-upper-space {
+  height: 100px;
+  background: rgba(163, 95, 34, 0.8);
+}
+
+.footer-logo {
+  background: rgba(163, 95, 34, 0.8);
+  border-radius: 10px;
+}
+
+.contact-info {
+  background: #673304;
+  color: #FF9400;
+}
+
+.footer-bg {
+  background: #673304;
+}
+
+.footer-menu .nav-link, .footer-about {
+  color: #FF9400;
+}
+.footer-menu .nav-link:hover, .footer-about:hover {
+  color: #DB7F00;
+}
+
+.icon {
+  font-size: 2rem;
+}
