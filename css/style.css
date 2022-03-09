@@ -64,10 +64,12 @@ header .nav-item:hover {
   background: #673304;
 }
 
-.footer-menu .nav-link, .footer-about {
+.footer-about,
+.footer-menu .nav-link {
   color: #FF9400;
 }
-.footer-menu .nav-link:hover, .footer-about:hover {
+.footer-about:hover,
+.footer-menu .nav-link:hover {
   color: #DB7F00;
 }
 

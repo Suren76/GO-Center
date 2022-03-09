@@ -1,8 +1,5 @@
-$logo_color_1: #673304;
-$logo_color_2: #FF9400;
-$header_color: #F8F9FA;
-$footer_color: #D8D8D8;
-$logo_color_1_1: rgba(#a35f22, 0.8);
+@import "vars";
+
 
 
 #logo {
@@ -58,13 +55,12 @@ header .nav-item:hover {
 
 .footer-upper-space {
   height: 100px;
-  background: $logo_color_1_1
+  background: $logo_color_1_1;
 }
 
 .footer-logo {
   background: $logo_color_1_1;
   border-radius: 10px;
-
 }
 
 .contact-info {
@@ -73,10 +69,11 @@ header .nav-item:hover {
 }
 
 .footer-bg {
-  background: $logo_color_1
+  background: $logo_color_1;
 }
 
-.footer-menu .nav-link ,.footer-about {
+.footer-about,
+.footer-menu .nav-link {
   color: $logo_color_2;
 
   &:hover {
@@ -85,5 +82,5 @@ header .nav-item:hover {
 }
 
 .icon {
-  font-size: 2rem
+  font-size: 2rem;
 }
