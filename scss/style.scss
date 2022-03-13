@@ -53,6 +53,27 @@ header .nav-item:hover {
   }
 }
 
+.test {
+  background: $header_color;
+  border-radius: 5px;
+  color: $logo_color_1;
+
+  .test-btn {
+    background: $logo_color_2;
+    color: $logo_color_1;
+    border-radius: 7px;
+  }
+}
+
+iframe {
+  height: auto;
+  max-height: 800px;
+  min-height: 600px;
+
+  
+}
+
+
 .footer-upper-space {
   height: 100px;
   background: $logo_color_1_1;

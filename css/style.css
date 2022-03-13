@@ -45,6 +45,23 @@ header .nav-item:hover {
   border-radius: 7px;
 }
 
+.test {
+  background: #F8F9FA;
+  border-radius: 5px;
+  color: #673304;
+}
+.test .test-btn {
+  background: #FF9400;
+  color: #673304;
+  border-radius: 7px;
+}
+
+iframe {
+  height: auto;
+  max-height: 800px;
+  min-height: 600px;
+}
+
 .footer-upper-space {
   height: 100px;
   background: rgba(163, 95, 34, 0.8);
