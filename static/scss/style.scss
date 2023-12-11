@@ -1,0 +1,262 @@
+@import "vars";
+@import "mixin";
+
+
+#logo {
+  width: 30px;
+   //color: $logo_color_1;
+}
+
+.randomBlock {
+  color: $darkred;
+}
+
+.navbar-nav li {
+  color: $logo_color_1;
+  border-radius: 5px;
+
+  a {
+    border-radius: 5px;
+    // transition: background .2s linear;
+  }
+
+  :hover {
+    border-radius: 5px;
+    background: $logo_color_2;
+
+  }
+}
+
+.carousel-item {
+  height: auto;
+  max-height: 500px;
+  min-height: 300px;
+}
+
+.auth {
+  a.login {
+    color: $logo_color_1;
+    border-color: $logo_color_1;
+
+    &:hover {
+      background: $logo_color_1;
+      color: white;
+    }
+
+    &:active {
+      background:darken($logo_color_1,5%);
+      color: white;
+    }
+  }
+
+  a.signup {
+    background: $logo_color_1;
+    color: white;
+
+    &:hover {
+      background:darken($logo_color_1,5%);
+      color: white;
+    }
+
+    &:active {
+      background: white;
+      color: $logo_color_1;;
+    }
+  }
+}
+
+.post {
+  background: $header_color;
+  border-radius: 7px;
+
+  a,
+  h3,
+  p {
+    color: $logo_color_1;
+  }
+
+  a {
+    border-radius: 10px;
+
+    &:hover {
+      background: $logo_color_2;
+      border-radius: 10px;
+    }
+  }
+}
+
+.events-list {
+  background: $header_color;
+  border-radius: 5px;
+
+  .event {
+    background: $logo_color_2;
+    color: $logo_color_1;
+    border-radius: 7px;
+  }
+}
+
+.test {
+  background: $header_color;
+  border-radius: 5px;
+  color: $logo_color_1;
+
+  .test-btn {
+    background: $logo_color_2;
+    color: $logo_color_1;
+    border-radius: 7px;
+  }
+}
+
+iframe {
+  height: auto;
+  max-height: 800px;
+  min-height: 600px;
+
+}
+
+.group-card {
+
+  color: $logo_color_1;
+
+  .card {
+    border-radius: 15px;
+    border-color: $logo_color_2;
+    background: $header_color;
+  }
+
+}
+
+
+.login-form {
+  color: $logo_color_1;
+
+  // .row {
+  //   background: $header_color;
+  // }
+
+  input {
+    border-color: $logo_color_1;
+  }
+
+  .form-check-input:checked {
+    background-color: $logo_color_1;
+    border-color: $logo_color_1;
+  }
+
+  .button-login, button {
+    background: $logo_color_1;
+    color: white;
+
+    &:hover {
+      background:darken($logo_color_1,5%);
+      color: white;
+    }
+
+
+  }
+
+  .login-sidebar {
+    background: $logo_color_1;
+    background: linear-gradient(135deg, $logo_color_1 10%, $logo_color_2 60%);
+  }
+
+  .login-form-upper-space {
+    height: 30px;
+  }
+
+  .login-form-bottom-space {
+    height: 60px;
+  }
+
+}
+
+
+.register-form {
+  color: $logo_color_2;
+
+  a {
+    color: $logo_color_2;
+  }
+
+  input {
+    border-color: $logo_color_2;
+  }
+
+  .form-check-input:checked {
+    background-color: $logo_color_2;
+    border-color: $logo_color_2;
+  }
+
+  .button-register, button {
+    background: $logo_color_2;
+    color: white;
+
+    &:hover {
+      background:darken($logo_color_2,5%);
+      color: white;
+    }
+  }
+
+
+  .myblock {
+    width: 320px;
+    height: 86px;
+
+  }
+
+}
+
+.profile {
+  .info-color {
+    color: darken($footer_color, 45%);
+  }
+
+  .field-color {
+    color: $logo_color_1;
+  }
+
+  .card {
+    background: white;
+  }
+
+  img {
+    max-width: 200px;
+    max-height: 200px;
+
+  }
+}
+
+
+
+.footer-upper-space {
+  height: 100px;
+  background: $logo_color_1_1;
+}
+
+.footer-logo {
+  background: $logo_color_1_1;
+  border-radius: 10px;
+}
+
+.contact-info {
+  background: $logo_color_1;
+  color: $logo_color_2;
+}
+
+.footer-bg {
+  background: $logo_color_1;
+}
+
+.footer-about,
+.footer-menu .nav-link {
+  color: $logo_color_2;
+
+  &:hover {
+    color: darken($logo_color_2, 10%);
+  }
+}
+
+.icon {
+  font-size: 2rem;
+}

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block headTitle %} - login {% endblock %}
+
+
+{% block main %}
+
+  <div class="login-form container my-5 px-5 px-sm-0">
+    <h2 class="mb-4">Login</h2>
+
+    <div class="row container shadow rounded-3 m-0 py-3 justify-content-center">
+
+      <form class=" col-10 col-sm-8 col-md-4 col-lg-3  my-3 mb-4 " action="{{url_for('login')}}" method="post">
+        <div class="login-form-upper-space col-12"> </div>
+        {{ form.hidden_tag() }}
+
+        <div class="username my-3 pb-3">
+          <label for="uname" class="form-label"> Username </label>
+          <!-- <input type="username" class="form-control" placeholder="example@gmail.com" name="uname" id="uname" required> -->
+          {{ form.username(class_="form-control", placeholder="example@gmail.com") }}
+          {% if form.username.errors %}
+            {{ form.username.errors[0] }}
+          {% endif %}
+        </div>
+
+        <div class="password my-3 pb-3">
+          <label for="pwd" class="form-label"> Password </label>
+          <!-- <input type="password" class="form-control" placeholder="********" name="pwd" id="pwd" required> -->
+          {{ form.password(class_="form-control", placeholder="********") }}
+          {% if form.password.errors %}
+            {{ form.password.errors[0] }}
+          {% endif %}
+          <div class="text-end"><a href="{{url_for('forget_password')}}" class="forget-password form-text text-decoration-none">forget password</a></div>
+        </div>
+
+
+        <div class="form-checkbox">
+          <!-- <input type="checkbox" class="form-check-input" name="rememberme" id="rememberme"> -->
+          {{ form.rememberme(class_="form-check-input") }}
+          <label for="rememberme" class="form-check-label"> Remember me </label>
+        </div>
+
+        <div class="text-center">
+          <!-- <button type="submit" class="btn mt-3"> Login </button> -->
+          {{ form.submit(class_="btn mt-3 button-login",) }}
+        </div>
+
+
+        <div class="login-form-bottom-space social-auth col-12 my-3 text-center">
+          <h4>or</h4>
+
+          <ul class="list-unstyled d-flex justify-content-center ">
+             <li class="ms-3">
+               <a class="link-dark" href="https://www.instagram.com/">
+                 <i class="bi bi-instagram icon"></i>
+               </a>
+             </li>
+
+             <li class="ms-3">
+               <a class="link-dark" href="https://www.facebook.com/">
+                 <i class="bi bi-messenger icon"></i>
+               </a>
+             </li>
+
+             <li class="ms-3">
+               <a class="link-dark" href="https://www.google.com">
+                 <i class="bi bi-google icon"></i>
+               </a>
+             </li>
+          </ul>
+
+        </div>
+      </form>
+
+      <div class="col-lg-2 col-md-1 col-sm-0 "> </div>
+      <!-- <div class="col-md-1 col-sm-0 align-self-center text-center"><h3>or</h3> </div> -->
+
+      <div class="col-md-5 col-sm-0 rounded-3 m-2 my-3 login-sidebar text-center d-none d-md-block"></div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

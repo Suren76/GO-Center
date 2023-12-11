@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block headTitle %} - Test page {% endblock %}
+
+
+{% block main %}
+
+  <div class="container my-5"> Test page
+
+    <div class="">
+      {{data}}
+    </div>
+
+    <br>
+
+    {% for i in data %}
+        <p>{{i.__dict__}}</p>
+        <!--  -->
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

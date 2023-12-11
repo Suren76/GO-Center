@@ -1,0 +1,206 @@
+#logo {
+  width: 30px;
+}
+
+.randomBlock {
+  color: #990000;
+}
+
+.navbar-nav li {
+  color: #673304;
+  border-radius: 5px;
+}
+.navbar-nav li a {
+  border-radius: 5px;
+}
+.navbar-nav li :hover {
+  border-radius: 5px;
+  background: #FF9400;
+}
+
+.carousel-item {
+  height: auto;
+  max-height: 500px;
+  min-height: 300px;
+}
+
+.auth a.login {
+  color: #673304;
+  border-color: #673304;
+}
+.auth a.login:hover {
+  background: #673304;
+  color: white;
+}
+.auth a.login:active {
+  background: #4e2703;
+  color: white;
+}
+.auth a.signup {
+  background: #673304;
+  color: white;
+}
+.auth a.signup:hover {
+  background: #4e2703;
+  color: white;
+}
+.auth a.signup:active {
+  background: white;
+  color: #673304;
+}
+
+.post {
+  background: #F8F9FA;
+  border-radius: 7px;
+}
+.post a,
+.post h3,
+.post p {
+  color: #673304;
+}
+.post a {
+  border-radius: 10px;
+}
+.post a:hover {
+  background: #FF9400;
+  border-radius: 10px;
+}
+
+.events-list {
+  background: #F8F9FA;
+  border-radius: 5px;
+}
+.events-list .event {
+  background: #FF9400;
+  color: #673304;
+  border-radius: 7px;
+}
+
+.test {
+  background: #F8F9FA;
+  border-radius: 5px;
+  color: #673304;
+}
+.test .test-btn {
+  background: #FF9400;
+  color: #673304;
+  border-radius: 7px;
+}
+
+iframe {
+  height: auto;
+  max-height: 800px;
+  min-height: 600px;
+}
+
+.group-card {
+  color: #673304;
+}
+.group-card .card {
+  border-radius: 15px;
+  border-color: #FF9400;
+  background: #F8F9FA;
+}
+
+.login-form {
+  color: #673304;
+}
+.login-form input {
+  border-color: #673304;
+}
+.login-form .form-check-input:checked {
+  background-color: #673304;
+  border-color: #673304;
+}
+.login-form .button-login, .login-form button {
+  background: #673304;
+  color: white;
+}
+.login-form .button-login:hover, .login-form button:hover {
+  background: #4e2703;
+  color: white;
+}
+.login-form .login-sidebar {
+  background: #673304;
+  background: linear-gradient(135deg, #673304 10%, #FF9400 60%);
+}
+.login-form .login-form-upper-space {
+  height: 30px;
+}
+.login-form .login-form-bottom-space {
+  height: 60px;
+}
+
+.register-form {
+  color: #FF9400;
+}
+.register-form a {
+  color: #FF9400;
+}
+.register-form input {
+  border-color: #FF9400;
+}
+.register-form .form-check-input:checked {
+  background-color: #FF9400;
+  border-color: #FF9400;
+}
+.register-form .button-register, .register-form button {
+  background: #FF9400;
+  color: white;
+}
+.register-form .button-register:hover, .register-form button:hover {
+  background: #e68500;
+  color: white;
+}
+.register-form .myblock {
+  width: 320px;
+  height: 86px;
+}
+
+.profile .info-color {
+  color: #656565;
+}
+.profile .field-color {
+  color: #673304;
+}
+.profile .card {
+  background: white;
+}
+.profile img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.footer-upper-space {
+  height: 100px;
+  background: rgba(162, 80, 6, 0.75);
+}
+
+.footer-logo {
+  background: rgba(162, 80, 6, 0.75);
+  border-radius: 10px;
+}
+
+.contact-info {
+  background: #673304;
+  color: #FF9400;
+}
+
+.footer-bg {
+  background: #673304;
+}
+
+.footer-about,
+.footer-menu .nav-link {
+  color: #FF9400;
+}
+.footer-about:hover,
+.footer-menu .nav-link:hover {
+  color: #cc7600;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

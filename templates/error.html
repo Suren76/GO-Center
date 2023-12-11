@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block headTitle %} - {{error.name}} {% endblock %}
+
+
+{% block main %}
+
+  <div class="container my-5  rounded-4  py-5" style="
+  background:#673304;
+  color:#D8D8D8;
+  ">
+
+
+     {% if error.code == 404 %}
+     <h2 class="ps-5">Page Not Found</h2>
+     <div class="text-center justify-content-center">
+         {% include 'animated-cat-404.html' %}
+     </div>
+     {% else %}
+       Error page<br>
+       Error title: {{error.name}}<br>
+       Error code: {{error.code}} <br>
+       Error message: {{error.description}} <br>
+     {% endif %}
+
+
+  </div>
+
+{% endblock %}

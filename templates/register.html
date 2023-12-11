@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+
+
+
+{% block headTitle %} - register {% endblock %}
+
+
+{% block main %}
+
+
+    <div class="register-form container my-5 px-5 px-sm-0">
+      <h2 class="my-3">Sign-up</h2>
+
+      <div class="row container shadow rounded-3 m-0 py-3 justify-content-center">
+
+        <form class=" col-10 col-sm-8 col-md-5 col-lg-4   my-3 mb-4 " action="{{url_for('register')}}" method="post">
+
+          {{ form.hidden_tag() }}
+
+          <div class="register-form-upper-space col-12"> </div>
+
+          <!-- {% for field in  form if field.name not in ["csrf_token", "terms_conditions", "submit"]%} -->
+          <!-- <div class="email my-3 pb-3"> -->
+            <!-- <label for="email" class="form-label"> Email </label> -->
+            <!-- <input type="email" class="form-control" placeholder="example@gmail.com"  id="email" name="email" aria-describedby="emailDescribeText" required> -->
+            <!-- {{form.email(class_="form-control", placeholder="example@gmail.com")}} -->
+            <!-- {{field.label}} -->
+            <!-- {{field(class_="form-control")}} -->
+          <!-- </div> -->
+          <!-- {% endfor %} -->
+
+          <div class="email my-3 pb-3">
+            <label for="email" class="form-label"> Email </label>
+            <!-- <input type="email" class="form-control" placeholder="example@gmail.com"  id="email" name="email" aria-describedby="emailDescribeText" required> -->
+            {{form.email(class_="form-control", placeholder="example@gmail.com")}}
+
+          </div>
+
+          <div class="full-name my-3 pb-3 row">
+
+            <div class="first-name col-6">
+                <label for="firstName" class="form-label"> First Name </label>
+                <!-- <input type="text" class="form-control" placeholder=""  id="firstName" name="firstName" aria-describedby="firstNameDescribeText" required> -->
+                {{ form.first_name(class_="form-control") }}
+
+            </div>
+
+            <div class="last-name col-6">
+                <label for="lastName" class="form-label"> Last Name </label>
+                <!-- <input type="text" class="form-control" placeholder=""  id="lastName" name="lastName" aria-describedby="lastNameDescribeText" required> -->
+                {{ form.last_name(class_="form-control") }}
+
+            </div>
+
+          </div>
+
+          <div class="gender row my-3 pb-3 py-auto" name="gender-radio">
+
+            <label for="gender" class="col-3 "> Gender  </label>
+
+            {% for i in form.gender %}
+            <div class="form-check col-auto ms-2">
+
+
+                {%if i.id == "gender-1" %}
+                <!-- <input type="radio" class="form-check-input" value="female" name="gender" placeholder="" id="female"> -->
+                {{i(class_="form-check-input")}}
+                <label for="female" class="form-check-label"> Female </label>
+                {%elif i.id == "gender-0" %}
+                <!-- <input type="radio" class="form-check-input" value="male" name="gender" placeholder="" id="male"> -->
+                {{i(class_="form-check-input")}}
+                <label for="male" class="form-check-label"> Male </label>
+                {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="birthday my-3 pb-3">
+              <label for="birthday" class="form-label"> Birthday </label>
+              <!-- <input type="date" class="form-control" placeholder=""  id="birthday" name="birthday" aria-describedby="birthdayDescribeText"> -->
+              {{form.birthday(class_="form-control")}}
+
+          </div>
+
+          <div class="address my-3 pb-3">
+            <label for="address" class="form-label"> Address </label>
+            <!-- <input type="text" class="form-control" placeholder=""  id="address" name="address" aria-describedby="addressDescribeText"> -->
+            {{form.address(class_="form-control")}}
+
+          </div>
+
+          <div class="username my-3 pb-3">
+            <label for="uname" class="form-label"> Username </label>
+            <!-- <input type="text" class="form-control" placeholder=""  id="uname" name="uname" aria-describedby="unameDescribeText"> -->
+            {{form.username(class_="form-control")}}
+
+          </div>
+
+          <div class="password my-3 pb-3">
+            <label for="pwd" class="form-label"> Password </label>
+            <!-- <input type="password" class="form-control" placeholder="********"  id="pwd" name="pwd" aria-describedby="pwdDescribeText" required> -->
+            {{form.password(class_="form-control", placeholder="********")}}
+
+          </div>
+
+          <div class="password password-repeat my-3 pb-3">
+            <label for="pwdRepeat" class="form-label"> Repeat password </label>
+            <!-- <input type="password" class="form-control" placeholder="********"  id="pwdRepeat" name="pwdRepeat" aria-describedby="pwdRepeatDescribeText" required> -->
+            {{form.password_repeat(class_="form-control", placeholder="********")}}
+
+          </div>
+
+          <div class="phone-number my-3 pb-3">
+            <label for="phoneNumber" class="form-label"> Phone Number </label>
+            <!-- <input type="tel" class="form-control" placeholder="088 888 888"  id="phoneNumber" name="phoneNumber" aria-describedby="phoneNumberDescribeText" required> -->
+            {{form.phone_number(class_="form-control", placeholder="088 888 888")}}
+
+          </div>
+
+
+
+
+          <div class="form-checkbox ">
+            <!-- <input type="checkbox" class="form-check-input" id="Terms&Conditions"> -->
+            {{form.terms_conditions(class_="form-check-input ", id="Terms&Conditions")}}
+            <label for="Terms&Conditions" class="form-check-label"> I agree to <a href="">Terms & Conditions</a> </label>
+          </div>
+
+          <div class="text-center">
+            <!-- <button type="submit" class="btn mt-3"> Sign-up </button> -->
+            {{form.submit(class_="btn mt-3 button-register")}}
+          </div>
+
+
+
+
+        </form>
+
+
+        <!-- <div class="col-md-1 col-sm-0 align-self-center text-center"><h3>or</h3> </div> -->
+
+
+        <div class="col-md-5 col-sm-0 col-0 rounded-3 m-2 my-3 mb-4 register-sidebar d-none d-md-block">
+
+            <div class="register-form-upper-space col-12"> </div>
+
+            <div class="my-3 pb-3 myblock">
+                {% if form.email.errors %}
+                  <div class="" style="height:37px;"></div>
+                  <span class="form-text text-danger" id="emailDescribeText">{{ form.email.errors[0] }}.</span>
+                {% endif %}
+
+                <div class="" style="height:37px;"></div>
+                <span class="form-text" id="emailDescribeText">Write valid email address.</span>
+            </div>
+            <div class="my-3 pb-3 myblock">
+                {% if form.first_name.errors %}
+                <span class="form-text text-danger" id="fullNameDescribeText">
+                  {{ form.first_name.errors[0] }}
+                  {{ form.last_name.errors[0] }}
+                </span>
+                {% else %}
+                <div class="" style="height:37px;"></div>
+                <span class="form-text" id="fullNameDescribeText">Write your full name.</span>
+                {% endif %}
+            </div>
+            <div class="my-3 pb-3 " style="height:42px;">
+
+                {% if form.gender.errors %}
+                  <span class="form-text text-danger" id="genderDescribeText">{{ form.gender.errors[0] }}</span>
+
+                {% else %}
+                <span class="form-text" id="genderDescribeText"></span>
+                {% endif %}
+            </div>
+            <div class="my-3 pb-3 myblock">
+
+                {% if form.birthday.errors %}
+                  <div class="" style="height:37px;"></div>
+                  <span class="form-text text-danger" id="birthdayDescribeText">{{ form.birthday.errors[0] }}</span>
+
+                {% else %}
+                <div class="" style="height:37px;"></div>
+                <span class="form-text" id="birthdayDescribeText"></span>
+                {% endif %}
+            </div>
+            <div class="my-3 pb-3 myblock">
+
+                {% if form.address.errors %}
+                  <div class="" style="height:37px;"></div>
+                  <span class="form-text text-danger" id="addressDescribeText">{{ form.address.errors[0] }}</span>
+
+                {% else %}
+                <div class="" style="height:37px;"></div>
+                <span class="form-text" id="addressDescribeText">Write your suite address.</span>
+                {% endif %}
+            </div>
+            <div class="my-3 pb-3 myblock">
+
+                {% if form.username.errors %}
+                  <div class="" style="height:37px;"></div>
+                  <span class="form-text text-danger" id="unameDescribeText">{{ form.username.errors[0] }}</span>
+
+                {% else %}
+                  <div class="" style="height:37px;"></div>
+                  <span class="form-text" id="unameDescribeText">Write how do you want to call you. Must be 8-20 characters long. Should contain digits, lower case letters and charecters.</span>
+                {% endif %}
+            </div>
+            <div class="my-3 pb-3 myblock">
+
+                {% if form.password.errors %}
+                  <div class="" style="height:37px;"></div>
+                  <span class="form-text text-danger" id="pwdDescribeText">{{ form.password.errors[0] }}</span>
+                {% else %}
+                  <div class="" style="height:37px;"></div>
+                  <span class="form-text" id="pwdDescribeText">Must be 8-20 characters long. Should contain digits, lower case and upper case letters and charecters.</span>
+                {% endif %}
+            </div>
+            <div class="my-3 pb-3 myblock">
+
+                {% if form.password_repeat.errors %}
+                  <div class="" style="height:37px;"></div>
+                  <span class="form-text text-danger" id="pwdRepeatDescribeText">{{ form.password_repeat.errors[0] }}.</span>
+
+                {% else %}
+                <div class="" style="height:37px;"></div>
+                <span class="form-text" id="pwdRepeatDescribeText">Please repet password.</span>
+                {% endif %}
+            </div>
+            <div class="my-3 pb-3 myblock">
+                {% if form.phone_number.errors %}
+                <div class="" style="height:37px;"></div>
+                <span class="form-text text-danger" id="phoneNumberDescribeText">{{ form.phone_number.errors[0] }}</span>
+
+                {% else %}
+                <div class="" style="height:37px;"></div>
+                <span class="form-text" id="phoneNumberDescribeText">Please write number without country code or 0.</span>
+                {% endif %}
+            </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+{% endblock %}
